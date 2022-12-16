@@ -1,0 +1,39 @@
+
+.App {
+  text-align: center;
+ background-color: #000000;
+   color: white;
+ font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.progress-div {
+    background-color: rgb(233, 233, 233);
+    border-radius: .5rem;
+    margin:"1em 0"
+}
+
+.progress {
+    background-color: #106bc6;
+    height: 10px;
+    border-radius: 1rem;
+    transition: 3s ease;
+    -webkit-transition: 3s ease;
+    -moz-transition: 3s ease;
+    -ms-transition: 3s ease;
+    -o-transition: 3s ease;
+}
+
+.menu{
+  font-Size: 16px;
+  color: "#a9a9a9";
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
+.menu:hover{
+  color: #495687;
+}
+
