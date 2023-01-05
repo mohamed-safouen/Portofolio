@@ -6,7 +6,7 @@ import "./../style.css"
 import { useState } from "react";
 const Header = () => {
   const Links=[
-    {link:"Home2"},
+    {link:"Home"},
     {link:"About"},
     {link:"Projects"},
     {link:"Contact"}
