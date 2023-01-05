@@ -25,6 +25,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install, build 
+        env:
+         REACT_APP_CRISP_WEB_ID: ${{ secrets.REACT_APP_CRISP_WEB_ID }}
+         REACT_APP_USER_ID: ${{ secrets.REACT_APP_USER_ID }}
+         REACT_APP_TEMPLATE_ID: ${{ secrets.REACT_APP_TEMPLATE_ID }}
+         REACT_APP_SERVICE_ID: ${{ secrets.REACT_APP_SERVICE_ID }}
+         
         run: |
           npm install
           npm run build --if-present   
