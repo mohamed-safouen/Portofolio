@@ -183,7 +183,7 @@ const [input, setInput] = useState({
           </Box>
         </VStack>
       </Box>
-      <ScrollToTop smooth className="scroll-top" />
+      <ScrollToTop smooth/>
     </Box>
   );
 };

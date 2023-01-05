@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 import photo from "./../images/avatar.jpg";
 import ProgressBar from "./../Hooks/progress";
 import "./../App.css";
-import file from"./../images/English-CV-safouen.pdf";
+import file from "./../files/Mohamed's Resume.pdf";
 
 export const socials = [
   { url: "https://www.facebook.com/mohamedsafouen" },
@@ -36,7 +36,15 @@ const About = () => {
     }
   }, [type]);
   
-  
+   const [isLoading, setIsLoading] = useState(false);
+
+   const handleClick = () => {
+     setIsLoading(true);
+     // simulate an async action
+     setTimeout(() => {
+       setIsLoading(false);
+     }, 2000);
+   };
   return (
     <Box id="box" width={"100%"} backgroundColor={"#f5f5f8"} padding="2rem 0">
       <Box
@@ -94,9 +102,13 @@ const About = () => {
           <Link
             href={file}
             download={"MohamedSafouen2022.pdf"}
-            style={{ textDecoration: "none" ,margin:"1.7rem 0" }}>
+            style={{ textDecoration: "none", margin: "1.7rem 0" }}>
             <Button
+              isLoading={isLoading}
+              onClick={handleClick}
+              variant="solid"
               colorScheme="facebook"
+              target="_blank"
               size="lg"
               _hover={{
                 bg: "transparent",
@@ -139,7 +151,8 @@ const About = () => {
           </Heading>
           <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
         </Box>
-        <Box id="bars"
+        <Box
+          id="bars"
           display="grid"
           gridTemplateColumns="50% 50%"
           gridGap="2em"
