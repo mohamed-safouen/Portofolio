@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portofolio/static/css/main.1c541d7f.css",
-    "main.js": "/Portofolio/static/js/main.5a74f344.js",
+    "main.js": "/Portofolio/static/js/main.4f07fb4d.js",
     "static/js/787.dd950cf4.chunk.js": "/Portofolio/static/js/787.dd950cf4.chunk.js",
     "static/media/photo1.png": "/Portofolio/static/media/photo1.9bd1ebb0da80ed30f3ec.png",
     "static/media/brand-icons.svg": "/Portofolio/static/media/brand-icons.6729d29753e000c17489.svg",
@@ -13,7 +13,7 @@
     "static/media/brand-icons.eot": "/Portofolio/static/media/brand-icons.d68fa3e67dbb653a13ce.eot",
     "static/media/brand-icons.ttf": "/Portofolio/static/media/brand-icons.65a2fb6d9aaa164b41a0.ttf",
     "static/media/photo4.png": "/Portofolio/static/media/photo4.89156276709f07010d29.png",
-    "static/media/English-CV-safouen.pdf": "/Portofolio/static/media/English-CV-safouen.c720296e4eeebc9dbb3d.pdf",
+    "static/media/Mohamed's Resume.pdf": "/Portofolio/static/media/Mohamed's Resume.af06b28fbd159f399366.pdf",
     "static/media/brand-icons.woff": "/Portofolio/static/media/brand-icons.cac87dc00c87a5d74711.woff",
     "static/media/brand-icons.woff2": "/Portofolio/static/media/brand-icons.278156e41e0ad908cf7f.woff2",
     "static/media/icons.woff": "/Portofolio/static/media/icons.425399f81e4ce7cbd967.woff",
@@ -26,11 +26,11 @@
     "static/media/photo3.png": "/Portofolio/static/media/photo3.516a6da514ebd95db098.png",
     "index.html": "/Portofolio/index.html",
     "main.1c541d7f.css.map": "/Portofolio/static/css/main.1c541d7f.css.map",
-    "main.5a74f344.js.map": "/Portofolio/static/js/main.5a74f344.js.map",
+    "main.4f07fb4d.js.map": "/Portofolio/static/js/main.4f07fb4d.js.map",
     "787.dd950cf4.chunk.js.map": "/Portofolio/static/js/787.dd950cf4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c541d7f.css",
-    "static/js/main.5a74f344.js"
+    "static/js/main.4f07fb4d.js"
   ]
 }
