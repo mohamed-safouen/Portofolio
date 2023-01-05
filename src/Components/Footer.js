@@ -1,12 +1,12 @@
 import { SocialIcon } from "react-social-icons";
-import { socials } from "./Data";
-import { Text, Box, HStack,Container } from "@chakra-ui/react";
+import { socials } from "./About";
+import { Text, Box, HStack,VStack,Container } from "@chakra-ui/react";
 const Footer = () => {
   return (
     <>
-      <Box backgroundColor="#000000">
+      <Box>
         <Container
-          as={HStack}
+          as={VStack}
           maxW={"6xl"}
           py={4}
           direction={{ base: "column", md: "row" }}
@@ -20,6 +20,7 @@ const Footer = () => {
                 <SocialIcon
                   key={index}
                   bgColor="white"
+                  fgColor="#1f232c"
                   url={social.url}
                   target="_blank"
                 />

@@ -1,6 +1,33 @@
 .hamburger{
     display: none;
+      
+
 }
+.burger{
+                    width: 2rem;
+                    height: 0.25rem;
+                    border-radius: 10px;
+                    background-color: black;
+                    transform-origin: 1px;
+                    transition: all 0.3s linear;
+                }
+.menu{
+    margin: 0;
+    border: 0;
+    line-height: 1;
+    text-decoration: none;
+    padding: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #151f3b;
+    font-family: Poppins,sans-serif;
+}
+.menu:hover{
+  color: #14161b
+}
+
 @media (max-width:767px){
   .hamburger{
   width: 2rem;
@@ -10,4 +37,22 @@
   flex-flow: column nowrap;
   z-index: 10;
 }
+.menu{
+    margin: 0;
+    border: 0;
+    line-height: 1;
+    text-decoration: none;
+    padding: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #151f3b;
+    -webkit-transition: all 10 ease-out;
+    -moz-transition: all 10 ease-out;
+    -ms-transition: all 10 ease-out;
+    -o-transition: all 10 ease-out;
+}
+
 }

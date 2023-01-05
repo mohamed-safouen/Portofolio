@@ -1,9 +1,18 @@
-
+*{
+  --primary: #151f3b;
+    --secondary: #676767;
+    --light: #000;
+    --dark: #000;
+}
+body{
+  font-family: Poppins,sans-serif;
+}
 .App {
-  text-align: center;
- background-color: #000000;
-   color: white;
- font-family: "Lato", Helvetica, Arial, sans-serif;
+font-family: Poppins,sans-serif;
+    position: relative;
+    font-size: 14px;
+    color: var(--secondary);
+    overflow-x: hidden;
 }
 
 .progress-div {
@@ -13,7 +22,7 @@
 }
 
 .progress {
-    background-color: #106bc6;
+    background-color:var(--primary);
     height: 10px;
     border-radius: 1rem;
     transition: 3s ease;
@@ -22,18 +31,11 @@
     -ms-transition: 3s ease;
     -o-transition: 3s ease;
 }
+.scroll-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.menu{
-  font-Size: 16px;
-  color: "#a9a9a9";
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-}
-.menu:hover{
-  color: #495687;
-}
+
 

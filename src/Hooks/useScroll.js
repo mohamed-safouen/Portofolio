@@ -14,6 +14,10 @@ function useScroll() {
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
     };
+     window.addEventListener("scroll", updateScroll);
+     return () => {
+       window.removeEventListener("scroll", updateScroll);
+     };
     window.addEventListener("scroll", updateScroll); 
     return () => {
       window.removeEventListener("scroll", updateScroll);

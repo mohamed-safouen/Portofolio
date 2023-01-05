@@ -3,24 +3,20 @@ import {
   Heading,
   Box,
   Image,
-  Text,Link,Button
+  Text,Link
 } from "@chakra-ui/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import tic from "./../images/photo1.png";
-import Ramadhan from "./../images/photo2.png";
 import Weather from "./../images/photo3.png";
 import Rent from "./../images/photo4.png";
+import { useEffect } from "react";
 const Project = [
   {
     Title: "Tic-Tac-Toe",
     image: tic,
     description: "Code the Game Tic-Tac-Toe with Javascript native /HTML/CSS",
     link: "https://mohamed-safouen.github.io/Tic-Tac-Toe/",
-  },
-  {
-    Title: "Ramadhan",
-    image: Ramadhan,
-    description: "Countdown for Event with JS/HTML/CSS ",
-    link: "https://mohamed-safouen.github.io/Ramadhan-Countdown/",
   },
   {
     Title: "Weather",
@@ -36,69 +32,86 @@ const Project = [
   },
 ];
 const Projects = () => {
+   useEffect(() => {
+     AOS.init();
+   }, []);
   return (
-    <Box backgroundColor="#000111" padding="3em">
-      <Button
-        _hover={{ backgroundColor: "#000A27" }}
-        fontSize="2rem"
-        margin="2rem auto"
-        padding="2rem 4.9rem"
-        maxWidth="20rem"
-        border={"2px solid"}
-        backgroundColor="black">
-        Projects
-      </Button>
+    <Box padding="3em">
       <Box
-        display="flex"
-        width="90%"
-        textAlign="start"
-        margin="0 auto"
-        gap="5em"
+        id="Projects"
+        display={"flex"}
         justifyContent="center"
-        flexWrap="wrap">
-        {Project.map((pro, index) => {
-          return (
-            <VStack key={index}>
-              <Link href={pro.link} isExternal>
-                <Box
-                  transition="all .8s ease-in-out"
-                  _hover={{
-                    backgroundColor: "#000A27",
-                    transform: "scale(1.2)",
-                  }}
-                  borderRadius="md"
-                  bg="#14213D"
-                  height="22em">
-                  <Image
-                    margin="0.5em 0"
-                    boxSize="20em"
-                    height={"15em"}
-                    borderRadius="md"
-                    src={pro.image}
-                  />
-                  <Heading
-                    padding="40 32"
-                    margin="1em"
-                    as="h3"
-                    size="1.5em"
-                    color="White">
-                    {pro.Title}
-                  </Heading>
-                  <Text
-                    padding="40 32"
-                    maxWidth="20em"
-                    size="18px"
-                    color="#8491A0"
-                    px="1em"
-                    pb="15px">
-                    {pro.description}
-                  </Text>
-                </Box>
-              </Link>
-            </VStack>
-          );
-        })}
+        alignItems={"center"}
+        width="20rem"
+        margin={"3em auto"}
+        gap="3">
+        <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
+        <Heading fontSize="3rem" maxWidth="20rem" color={"#151f3b"}>
+          Projects
+        </Heading>
+        <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
       </Box>
+      <div data-aos="zoom-in" data-aos-duration="1500">
+        <Box
+          display="flex"
+          width="90%"
+          textAlign="start"
+          margin="2rem auto"
+          gap="5em"
+          justifyContent="center"
+          flexWrap="wrap">
+          {Project.map((pro, index) => {
+            return (
+              <VStack key={index}>
+                <div
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500">
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href={pro.link}
+                    isExternal>
+                    <Box
+                      transition="all .5s ease-in-out"
+                      _hover={{
+                        backgroundColor: "#151f3b",
+                        transform: "scale(1.2)",
+                      }}
+                      borderRadius="md"
+                      bg="#14213D"
+                      height="25em">
+                      <Image
+                        margin="0.5em 0"
+                        boxSize="20em"
+                        height={"15em"}
+                        borderRadius="md"
+                        src={pro.image}
+                      />
+                      <Heading
+                        padding="40 32"
+                        margin="1em"
+                        as="h3"
+                        size="1.5em"
+                        color="White">
+                        {pro.Title}
+                      </Heading>
+                      <Text
+                        padding="40 32"
+                        maxWidth="20em"
+                        size="18px"
+                        color="#8491A0"
+                        px="1em"
+                        pb="15px">
+                        {pro.description}
+                      </Text>
+                    </Box>
+                  </Link>
+                </div>
+              </VStack>
+            );
+          })}
+        </Box>
+      </div>
     </Box>
   );
 };

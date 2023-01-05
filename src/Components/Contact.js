@@ -7,9 +7,10 @@ import {
   FormLabel,
   FormErrorMessage,
   FormHelperText,
-  VStack,HStack,Box,Heading,Textarea,Button,
+  VStack,Box,Heading,Textarea,Button,
 } from "@chakra-ui/react";
 import { HiPhone, HiOutlineMail, HiLocationMarker } from "react-icons/hi";
+import ScrollToTop from "react-scroll-to-top";
 
 
 const Contact = () => {
@@ -23,9 +24,9 @@ const [input, setInput] = useState({
 
   const isError = input === ''
 
-  const SERVICE_ID = "service_0vel98n";
-  const TEMPLATE_ID = "template_hb8ep1a";
-  const USER_ID = "8_6b2eoaz76zVV9eU";
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+  const USER_ID = process.env.REACT_APP_USER_ID;
   const handleOnSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
@@ -45,93 +46,104 @@ const [input, setInput] = useState({
   };
 
   return (
-    <Box backgroundColor="#000A27">
-      <Box py={2} spacing={8}>
-        <VStack w="100%" p={32} margin="0 auto">
-          <Button
-            _hover={{ backgroundColor: "#000A27" }}
-            fontSize="2rem"
-            margin="2rem auto"
-            padding="2rem 4.9rem"
-            maxWidth="20rem"
-            border={"2px solid"}
-            backgroundColor="black">
-            Contact me
-          </Button>
+    <Box backgroundColor={"#f5f5f8"} margin="5rem auto" padding={"5rem 0"}>
+      <Box spacing={8}>
+        <VStack width="80%" margin="0 auto">
+          <Box
+            id="Contact"
+            display={"flex"}
+            justifyContent="center"
+            alignItems={"center"}
+            width="20rem"
+            margin={"3em auto"}
+            gap="3">
+            <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
+            <Heading fontSize="3rem" maxWidth="20rem" color={"#151f3b"}>
+              Contact
+            </Heading>
+            <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
+          </Box>
           <Box
             display="flex"
-            width="90%"
-            margin="0 auto"
-            gap="10"
+            width="100%"
+            gap="2%"
             justifyContent="center"
-            flexWrap="wrap">
+            flexWrap="wrap"
+            paddingBottom={"5rem "}>
             <Button
-              size="lg"
+              size="md"
+              width="18rem"
               height="48px"
               variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: "2px solid white" }}
-              leftIcon={<HiPhone color="white" size="2em" />}>
+              color="#151f3b"
+              _hover={{ border: "2px solid #151f3b" }}
+              leftIcon={<HiPhone color="#151f3b" size="2em" />}>
               +216 55 339 338
             </Button>
             <Button
               size="md"
+              width="18rem"
               height="48px"
               variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: "2px solid white" }}
-              leftIcon={<HiOutlineMail color="white" size="2em" />}>
+              color="#151f3b"
+              _hover={{ border: "2px solid #151f3b" }}
+              leftIcon={<HiOutlineMail color="#151f3b" size="2em" />}>
               mohamedsafouen@gmail.com
             </Button>
             <Button
               size="md"
+              width="18rem"
               height="48px"
               variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: "2px solid white" }}
-              leftIcon={<HiLocationMarker color="white" size="2em" />}>
+              color="#151f3b"
+              _hover={{ border: "2px solid #151f3b" }}
+              leftIcon={<HiLocationMarker color="#151f3b" size="2em" />}>
               Sousse, Tunisia
             </Button>
           </Box>
-          <Box p={6} rounded="md" w="100%">
+          <Box margin="" rounded="md" w="100%">
             <form onSubmit={handleOnSubmit}>
               <VStack textAlign="start" spacing={4}>
                 <Box
-                  display="flex"
-                  flexDirection={"row"}
+                  display={"flex"}
+                  justifyContent="space-around"
                   width="100%"
-                  margin="0 auto"
-                  gap="5"
-                  justifyContent="center">
-                  <FormControl isRequired isInvalid={isError}>
-                    <FormLabel htmlFor="name">Name</FormLabel>
-                    <Input
-                      id="firstName"
-                      name="name"
-                      value={input.name}
-                      onChange={handleInputChange}
-                    />
-                    {!isError ? (
-                      <FormHelperText>Enter Your name.</FormHelperText>
-                    ) : (
-                      <FormErrorMessage>Name is required.</FormErrorMessage>
-                    )}
-                  </FormControl>
-                  <FormControl isRequired isInvalid={isError}>
-                    <FormLabel htmlFor="email">Email Address</FormLabel>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={input.email}
-                      onChange={handleInputChange}
-                    />
-                    {!isError ? (
-                      <FormHelperText>Enter Your email.</FormHelperText>
-                    ) : (
-                      <FormErrorMessage>Email is required.</FormErrorMessage>
-                    )}
-                  </FormControl>
+                  gap={"0.5em"}
+                  flexWrap={"wrap"}
+                  margin={"0 auto"}>
+                  <Box width={"35rem"}>
+                    <FormControl isRequired isInvalid={isError}>
+                      <FormLabel htmlFor="name">Name</FormLabel>
+                      <Input
+                        id="firstName"
+                        name="name"
+                        value={input.name}
+                        onChange={handleInputChange}
+                      />
+                      {!isError ? (
+                        <FormHelperText>Enter Your name.</FormHelperText>
+                      ) : (
+                        <FormErrorMessage>Name is required.</FormErrorMessage>
+                      )}
+                    </FormControl>
+                  </Box>
+                  <Box width={"35rem"}>
+                    <FormControl isRequired isInvalid={isError}>
+                      <FormLabel htmlFor="email">Email Address</FormLabel>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={input.email}
+                        onChange={handleInputChange}
+                      />
+                      {!isError ? (
+                        <FormHelperText>Enter Your email.</FormHelperText>
+                      ) : (
+                        <FormErrorMessage>Email is required.</FormErrorMessage>
+                      )}
+                    </FormControl>
+                  </Box>
                 </Box>
                 <FormControl isInvalid={isError}>
                   <FormLabel htmlFor="message">Your message</FormLabel>
@@ -153,11 +165,16 @@ const [input, setInput] = useState({
                   variant="outline"
                   width="full"
                   color="White"
-                  _hover={{ bg: "#ebedf0", color: "black" }}
+                  backgroundColor={"#151f3b"}
+                  _hover={{
+                    bg: "white",
+                    color: "black",
+                    border: "black solid 1px",
+                  }}
                   _active={{
-                    bg: "#dddfe2",
+                    bg: "#151f3b",
                     transform: "scale(0.98)",
-                    borderColor: "#bec3c9",
+                    borderColor: "#151f3b",
                   }}>
                   Send
                 </Button>
@@ -166,6 +183,7 @@ const [input, setInput] = useState({
           </Box>
         </VStack>
       </Box>
+      <ScrollToTop smooth className="scroll-top" />
     </Box>
   );
 };
