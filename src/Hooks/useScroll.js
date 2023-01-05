@@ -18,10 +18,6 @@ function useScroll() {
      return () => {
        window.removeEventListener("scroll", updateScroll);
      };
-    window.addEventListener("scroll", updateScroll); 
-    return () => {
-      window.removeEventListener("scroll", updateScroll);
-    };
   }, [scroll]); // run when scroll direction changes
 
   return scroll;
