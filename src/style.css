@@ -29,7 +29,7 @@
 }
 .Arrow{
      border: solid #151f3b 1px !important;
-     right: 2.4rem !important;
+     right: 2.5em !important;
      bottom: 1% !important;
      animation: sdb04 2s infinite;
      -webkit-animation: sdb04 1.2s infinite;
@@ -81,5 +81,7 @@
     -ms-transition: all 10 ease-out;
     -o-transition: all 10 ease-out;
 }
-
+.Arrow{
+     right: 1.5em !important;
+}
 }
