@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { HiPhone, HiOutlineMail, HiLocationMarker } from "react-icons/hi";
 import ScrollToTop from "react-scroll-to-top";
-
+import "./../style.css"
 
 const Contact = () => {
 const [input, setInput] = useState({
@@ -183,7 +183,14 @@ const [input, setInput] = useState({
           </Box>
         </VStack>
       </Box>
-      <ScrollToTop smooth/>
+      <ScrollToTop
+        smooth
+        color="#151f3b"
+        className="Arrow"
+        viewBox="0 0 256 256"
+        width="38"
+        height="28"
+      />
     </Box>
   );
 };

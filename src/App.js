@@ -1,5 +1,7 @@
 import * as React from "react";
+import { useState,useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Spinner,Flex } from "@chakra-ui/react";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Projects from "./Components/Project";
@@ -17,14 +19,37 @@ function App() {
     s.async = 1;
     d.getElementsByTagName("head")[0].appendChild(s);
   })();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
-    <ChakraProvider>
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </ChakraProvider>
+    <>
+      <ChakraProvider>
+        {loading ? (
+          <Flex height="100vh" alignItems="center" justifyContent="center">
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="#151f3b.500"
+              size="xl"
+            />
+          </Flex>
+        ) : (
+          <>
+            <Header />
+            <About />
+            <Projects />
+            <Contact />
+            <Footer />
+          </>
+        )}
+      </ChakraProvider>
+    </>
   );
 }
 

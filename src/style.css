@@ -27,7 +27,35 @@
 .menu:hover{
   color: #14161b
 }
-
+.Arrow{
+     border: solid #151f3b 1px !important;
+     right: 2.4rem !important;
+     bottom: 1% !important;
+     animation: sdb04 2s infinite;
+     -webkit-animation: sdb04 1.2s infinite;
+}
+@keyframes sdb04 {
+  0% {
+    transform:  translate(0, 0);
+}
+  20% {
+    transform:  translate(0, 5px);
+    -webkit-transform:  translate(0, 5px);
+    -moz-transform:  translate(0, 5px);
+    -ms-transform:  translate(0, 5px);
+    -o-transform:  translate(0, 5px);
+}
+  40% {
+    transform:  translate(0, 0);
+}
+}
+.Arrow:hover{
+  transform:scale(1.1) ;
+  -webkit-transform:scale(1.1) ;
+  -moz-transform:scale(1.1) ;
+  -ms-transform:scale(1.1) ;
+  -o-transform:scale(1.1) ;
+}
 @media (max-width:767px){
   .hamburger{
   width: 2rem;
