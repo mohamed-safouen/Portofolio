@@ -1,22 +1,35 @@
-import { Box, HStack,VStack, Link, Image,useMediaQuery} from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  VStack,
+  Link,
+  Image,
+  useMediaQuery,
+  Menu,
+  MenuButton,
+  MenuList,
+  IconButton,
+  MenuItemOption,
+  Button,
+} from "@chakra-ui/react";
 import logo from "./../images/logo.png"
-import Hamburger from "./Hamburger/Hamburger";
+import { HamburgerIcon} from "@chakra-ui/icons";
 import useScroll from "../Hooks/useScroll";
-import "./../style.css"
 import { useState } from "react";
+import "./../style.css"
 const Header = () => {
   const Links=[
-    {link:"Home"},
-    {link:"About"},
-    {link:"Projects"},
-    {link:"Contact"}
+    "Home",
+    "About",
+    "Projects",
+    "Contact"
   ]
   const [isLessThan767] = useMediaQuery("(max-width: 767px)");
-  const [openHamburger, setOpenHamburger] = useState(false);
-  const toggleHamburger = () => {
-    setOpenHamburger(!openHamburger);
-  };
   const Scrolling = useScroll();
+  const [open,setopen] = useState(false)
+ const toggleopen = () => {
+   setopen(!open);
+ };
   const handleClick = (a) => () => {
     const element = document.getElementById(a);
     if (element) {
@@ -24,8 +37,10 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
+      document.getElementsByClassName("css-r6z5ec")[0].style.visibility = "hidden";
+      
     }
-    toggleHamburger();
+  
   };
   return (
     <Box
@@ -46,39 +61,22 @@ const Header = () => {
           </Link>
           <nav>
             {isLessThan767 ? (
-              <div>
-                <div className="hamburger" onClick={toggleHamburger}>
-                  <Hamburger isOpen={openHamburger} />
-                </div>
-                {openHamburger ? (
-                  <VStack
-                    visibility="visible"
-                    position={"fixed"}
-                    height={"auto"}
-                    backgroundColor={"rgba(255,255,255, 0.9)"}
-                    top="0"
-                    left="0"
-                    width="100vw"
-                    padding="2rem"
-                    zIndex={"9"}
-                    spacing={5}>
-                    {Links.map((x, index) => {
-                      return (
-                        <a
-                          style={{ transition: "all 5.3s ease-in-out" }}
-                          className="menu"
-                          key={index}
-                          href={`#${x.link}-section`}
-                          onClick={handleClick(x.link)}>
-                          {x.link}
-                        </a>
-                      );
-                    })}
-                  </VStack>
-                ) : (
-                  ""
-                )}
-              </div>
+              <Menu>
+                <MenuButton as={IconButton} icon={<HamburgerIcon />} />
+                <MenuList  as={VStack}>
+                  {Links.map((x, index) => {
+                    return (
+                      <a
+                        className="menu"
+                        key={index}
+                        href={`#${x}-section`}
+                        onClick={handleClick(x)}>
+                        {x}
+                      </a>
+                    );
+                  })}
+                </MenuList>
+              </Menu>
             ) : (
               <HStack spacing={5}>
                 {Links.map((x, index) => {
@@ -86,9 +84,9 @@ const Header = () => {
                     <a
                       className="menu"
                       key={index}
-                      href={`#${x.link}-section`}
-                      onClick={handleClick(x.link)}>
-                      {x.link}
+                      href={`#${x}-section`}
+                      onClick={handleClick(x)}>
+                      {x}
                     </a>
                   );
                 })}
