@@ -1,13 +1,11 @@
-import "./hamburger.css"
+
+import { HamburgerIcon } from "@chakra-ui/icons";
 const Hamburger=({isOpen})=>{
     return (
       <>
-        <div className="hamburger">
-          <div className="burger " style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0)"}}/>
-          <div className="burger " style={{visibility: isOpen ? 'hidden' : 'visible'}}/>
-          <div className="burger " style={{transform: isOpen ? 'rotate(-45deg)' : 'rotate(0)'}}/>
-        </div>
-      </>
+        <HamburgerIcon />
+        </>
+      
     );
 }
 export default Hamburger;

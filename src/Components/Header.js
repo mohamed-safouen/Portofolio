@@ -5,15 +5,13 @@ import {
   Link,
   Image,
   useMediaQuery,
-  Menu,
-  MenuButton,
-  MenuList,
-  IconButton,
 } from "@chakra-ui/react";
 import logo from "./../images/logo.png"
-import { HamburgerIcon} from "@chakra-ui/icons";
+
 import useScroll from "../Hooks/useScroll";
 import "./../style.css"
+import { useState } from "react";
+import Hamburger from "./Hamburger/Hamburger";
 const Header = () => {
   const Links=[
     "Home",
@@ -22,6 +20,10 @@ const Header = () => {
     "Contact"
   ]
   const [isLessThan767] = useMediaQuery("(max-width: 767px)");
+  const [openHamburger, setOpenHamburger] = useState(false);
+  const toggleHamburger = () => {
+    setOpenHamburger(!openHamburger);
+  };
   const Scrolling = useScroll();
   const handleClick = (a) => () => {
     const element = document.getElementById(a);
@@ -30,10 +32,8 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
-      document.getElementsByClassName("css-r6z5ec")[0].style.visibility = "hidden";
-      
     }
-  
+    toggleHamburger();
   };
   return (
     <Box
@@ -54,22 +54,36 @@ const Header = () => {
           </Link>
           <nav>
             {isLessThan767 ? (
-              <Menu>
-                <MenuButton as={IconButton} icon={<HamburgerIcon />} />
-                <MenuList  as={VStack}>
-                  {Links.map((x, index) => {
-                    return (
-                      <a
-                        className="menu"
-                        key={index}
-                        href={`#${x}-section`}
-                        onClick={handleClick(x)}>
-                        {x}
-                      </a>
-                    );
-                  })}
-                </MenuList>
-              </Menu>
+              <>
+                <div onClick={toggleHamburger}>
+                  <Hamburger isOpen={openHamburger} />
+                </div>
+                {openHamburger ? (
+                  <VStack
+                    visibility="visible"
+                    position={"fixed"}
+                    height={"auto"}
+                    backgroundColor={"rgba(255, 255, 255, 0.6)"}
+                    transition="all 2.3s ease-in"
+                    right="5"
+                    padding="2rem 4rem"
+                    spacing={5}>
+                    {Links.map((x, index) => {
+                      return (
+                        <a
+                          className="menu"
+                          key={index}
+                          href={`#${x}-section`}
+                          onClick={handleClick(x)}>
+                          {x}
+                        </a>
+                      );
+                    })}
+                  </VStack>
+                ) : (
+                  ""
+                )}
+              </>
             ) : (
               <HStack spacing={5}>
                 {Links.map((x, index) => {
