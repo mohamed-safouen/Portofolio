@@ -9,8 +9,6 @@ import {
   MenuButton,
   MenuList,
   IconButton,
-  MenuItemOption,
-  Button,
 } from "@chakra-ui/react";
 import logo from "./../images/logo.png"
 import { HamburgerIcon} from "@chakra-ui/icons";
@@ -26,10 +24,6 @@ const Header = () => {
   ]
   const [isLessThan767] = useMediaQuery("(max-width: 767px)");
   const Scrolling = useScroll();
-  const [open,setopen] = useState(false)
- const toggleopen = () => {
-   setopen(!open);
- };
   const handleClick = (a) => () => {
     const element = document.getElementById(a);
     if (element) {
