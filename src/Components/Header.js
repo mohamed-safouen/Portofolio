@@ -13,7 +13,6 @@ import {
 import logo from "./../images/logo.png"
 import { HamburgerIcon} from "@chakra-ui/icons";
 import useScroll from "../Hooks/useScroll";
-import { useState } from "react";
 import "./../style.css"
 const Header = () => {
   const Links=[
