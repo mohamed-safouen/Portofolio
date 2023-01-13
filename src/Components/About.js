@@ -18,7 +18,7 @@ export const socials = [
    { name: "REACT", value: 50 },
    { name: "JavaScript", value: 70 },
    { name: "JQuery", value: 80 },
-   { name: "Boostrap", value: 80 },
+   { name: "bootstrap", value: 80 },
    { name: "WordPress", value: 60 },
    { name: "SQL", value: 20 },
  ];
