@@ -55,7 +55,7 @@ const Header = () => {
           <nav>
             {isLessThan767 ? (
               <>
-                <div onClick={toggleHamburger}>
+                 <div className="hamburger" onClick={toggleHamburger}>
                   <Hamburger isOpen={openHamburger} />
                 </div>
                 {openHamburger ? (
@@ -63,8 +63,7 @@ const Header = () => {
                     visibility="visible"
                     position={"fixed"}
                     height={"auto"}
-                    backgroundColor={"rgba(255, 255, 255, 0.6)"}
-                    transition="all 2.3s ease-in"
+                    backgroundColor="rgba(255, 255, 255, 0.6)"
                     right="5"
                     padding="2rem 4rem"
                     spacing={5}>
