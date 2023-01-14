@@ -1,5 +1,5 @@
 
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 const Hamburger=({isOpen})=>{
     return (
       <>
