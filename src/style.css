@@ -1,7 +1,5 @@
 .hamburger{
-    display: none;
-      
-
+     cursor: pointer;
 }
 .burger{
                     width: 2rem;
@@ -57,14 +55,6 @@
   -o-transform:scale(1.1) ;
 }
 @media (max-width:767px){
-  .hamburger{
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
-}
 .menu{
     margin: 0;
     border: 0;
