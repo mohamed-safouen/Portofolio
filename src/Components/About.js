@@ -20,7 +20,7 @@ export const socials = [
    { name: "JQuery", value: 80 },
    { name: "bootstrap", value: 80 },
    { name: "WordPress", value: 60 },
-   { name: "SQL", value: 20 },
+   { name: "SQL", value: 28 },
  ];
 const About = () => {
   const title = "I'm Front End Developer";
