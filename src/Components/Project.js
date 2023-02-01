@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import tic from "./../images/photo1.png";
 import Weather from "./../images/photo3.png";
 import Rent from "./../images/photo4.png";
+import Resto from "./../images/photo5.png";
 import { useEffect } from "react";
 const Project = [
   {
@@ -21,14 +22,22 @@ const Project = [
   {
     Title: "Weather",
     image: Weather,
-    description: "Weather App Using HTML/CSS/JS Using API from openweathermap.org ",
+    description:
+      "Weather App Using HTML/CSS/JS Using API from openweathermap.org ",
     link: "https://mohamed-safouen.github.io/Weather/",
   },
   {
     Title: "RentCar",
     image: Rent,
-    description: "Rent Car Dashboard with JS/HTML/CSS with Bootstrap and Jquery Library",
+    description:
+      "Rent Car Dashboard with JS/HTML/CSS with Bootstrap and Jquery Library",
     link: "https://dash-rent-hoo0azytn-rent-car-tn.vercel.app/",
+  },
+  {
+    Title: "Little Lemon Restaurant",
+    image: Resto,
+    description: "Final project for Meta Front-End Developer",
+    link: "https://mohamed-safouen.github.io/Little-Limon-Restaurant/",
   },
 ];
 const Projects = () => {

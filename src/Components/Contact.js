@@ -9,8 +9,7 @@ import {
   FormHelperText,
   VStack,Box,Heading,Textarea,Button,
 } from "@chakra-ui/react";
-import { HiPhone, HiOutlineMail, HiLocationMarker } from "react-icons/hi";
-import ScrollToTop from "react-scroll-to-top";
+import { HiPhone, HiOutlineMail, HiLocationMarker,HiArrowUp } from "react-icons/hi";
 import "./../style.css"
 
 const Contact = () => {
@@ -183,14 +182,18 @@ const [input, setInput] = useState({
           </Box>
         </VStack>
       </Box>
-      <ScrollToTop
-        smooth
-        color="#151f3b"
+      <div
         className="Arrow"
-        viewBox="0 0 256 256"
-        width="38"
-        height="28"
-      />
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+          
+        }}>
+          <HiArrowUp size={"3rem"}/>
+        </div>
     </Box>
   );
 };

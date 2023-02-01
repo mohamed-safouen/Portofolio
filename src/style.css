@@ -26,11 +26,21 @@
   color: #14161b
 }
 .Arrow{
-     border: solid #151f3b 1px !important;
-     right: 2.5em !important;
-     bottom: 1% !important;
+     border: solid #151f3b 1px;
+     border-radius: 5px;
+     background-color:transparent;
+     width: 3rem;
+     bottom: 1% ;
+     height: 3rem;
      animation: sdb04 2s infinite;
      -webkit-animation: sdb04 1.2s infinite;
+     cursor: pointer;
+     position: fixed;
+     right: 2rem;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
 }
 @keyframes sdb04 {
   0% {
