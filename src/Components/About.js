@@ -1,6 +1,16 @@
 import { Text,Box, Heading, HStack, VStack,Image, Button, Link } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
+import {
+  SiHtml5,
+  SiReact,
+  SiCss3,
+  SiJavascript,
+  SiJquery,
+  SiBootstrap,
+  SiWordpress,
+} from "react-icons/si";
+import { AiOutlineConsoleSql } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -17,14 +27,14 @@ export const socials = [
   { url: "https://stackoverflow.com/users/19407251/mohamed-safouen-naguez" },
 ];
  const Skills = [
-   { name: "HTML", value: 90 },
-   { name: "CSS", value: 90 },
-   { name: "REACT", value: 50 },
-   { name: "JavaScript", value: 70 },
-   { name: "JQuery", value: 80 },
-   { name: "bootstrap", value: 80 },
-   { name: "WordPress", value: 60 },
-   { name: "SQL", value: 28 },
+   { name: <SiHtml5 size={"3rem"} />, value: 90 },
+   { name: <SiCss3 size={"3rem"} />, value: 90 },
+   { name: <SiReact size={"3rem"} />, value: 50 },
+   { name: <SiJavascript size={"3rem"} />, value: 70 },
+   { name: <SiJquery size={"3rem"} />, value: 80 },
+   { name: <SiBootstrap size={"3rem"} />, value: 80 },
+   { name: <SiWordpress size={"3rem"} />, value: 60 },
+   { name: <AiOutlineConsoleSql size={"3rem"} />, value: 28 },
  ];
 const About = () => {
   const title = "I'm Front End Developer";
@@ -47,7 +57,6 @@ const About = () => {
 
    const handleClick = () => {
      setIsLoading(true);
-     // simulate an async action
      setTimeout(() => {
        setIsLoading(false);
      }, 2000);
@@ -175,11 +184,9 @@ const About = () => {
           {Skills.map((skill, index) => {
             return (
               <div key={index} style={{ maxHeight: "12em" }}>
-                <Text
-                  textAlign="left"
-                  fontFamily={"font-family: Poppins,sans-serif;"}>
+                <Box  marginBottom={"1rem"}>
                   {skill.name}
-                </Text>
+                </Box>
                 <ProgressBar
                   style={{ margin: "1em 0" }}
                   width="100%"

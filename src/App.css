@@ -17,13 +17,22 @@ font-family: Poppins,sans-serif;
 
 .progress-div {
     background-color: rgb(233, 233, 233);
-    border-radius: .5rem;
-    margin:"1em 0"
+    border-radius: 5rem;
+    margin:"1em 0";
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
 }
 
 .progress {
     background-color:var(--primary);
-    height: 10px;
+    height: 20px;
+    color: white;
+    font-size: 15px;
+    text-align: end;
+    padding-right: 20px;
+    vertical-align: center;
     border-radius: 1rem;
     transition: 3s ease;
     -webkit-transition: 3s ease;

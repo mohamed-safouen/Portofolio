@@ -25,7 +25,7 @@ window.addEventListener("scroll", handlerscroll);
   return (
     <div>
       <div className="progress-div">
-        <div style={{ width: `${value}%` }} className="progress" />
+        <div style={{ width: `${value}%` }} className="progress"> {value} % </div>
       </div>
     </div>
   );
