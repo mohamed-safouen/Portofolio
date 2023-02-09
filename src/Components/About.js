@@ -1,8 +1,12 @@
 import { Text,Box, Heading, HStack, VStack,Image, Button, Link } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import photo from "./../images/avatar.jpg";
 import ProgressBar from "./../Hooks/progress";
+
 import "./../App.css";
 import file from "./../files/Mohamed's Resume.pdf";
 
@@ -35,6 +39,9 @@ const About = () => {
       }, 2000);
     }
   }, [type]);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   
    const [isLoading, setIsLoading] = useState(false);
 
@@ -46,7 +53,7 @@ const About = () => {
      }, 2000);
    };
   return (
-    <Box id="box" width={"100%"} backgroundColor={"#f5f5f8"} padding="2rem 0">
+    <Box id="box" width={"100%"} backgroundColor={"#f5f5f8"} padding="5rem 0">
       <Box
         display={"flex"}
         width="90%"
@@ -55,10 +62,18 @@ const About = () => {
         flexWrap="wrap"
         justifyItems={"center"}
         justifyContent="space-around">
-        <Box>
+        <Box
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-mirror="true">
           <Image boxSize="25rem" borderRadius={"50%"} src={photo}></Image>
         </Box>
         <VStack
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+          data-aos-mirror="true"
           width={"50%"}
           alignItems="start"
           fontWeight="500"
