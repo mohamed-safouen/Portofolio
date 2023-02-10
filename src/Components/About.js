@@ -79,8 +79,7 @@ const About = () => {
           <Image boxSize="25rem" borderRadius={"50%"} src={photo}></Image>
         </Box>
         <VStack
-          data-aos="fade-left"
-          data-aos-easing="linear"
+          data-aos="fade-up"
           data-aos-duration="800"
           data-aos-mirror="true"
           width={"50%"}
