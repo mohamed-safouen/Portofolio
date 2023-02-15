@@ -6,10 +6,27 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-  FormHelperText,
   VStack,Box,Heading,Textarea,Button,
 } from "@chakra-ui/react";
-import { HiPhone, HiOutlineMail, HiLocationMarker,HiArrowUp } from "react-icons/hi";
+import { HiArrowUp } from "react-icons/hi";
+import {
+  Container,
+  Flex,
+  Link,
+  IconButton,
+  HStack,
+  Wrap,
+  WrapItem,
+  InputGroup,
+  InputLeftElement,
+} from "@chakra-ui/react";
+import {
+  MdPhone,
+  MdEmail,
+  MdLocationOn,
+  MdOutlineEmail,
+} from "react-icons/md";
+import { BsGithub, BsLinkedin, BsPerson,BsTwitter } from "react-icons/bs";
 import "./../style.css"
 
 const Contact = () => {
@@ -45,143 +62,212 @@ const [input, setInput] = useState({
   };
 
   return (
-    <Box backgroundColor={"#f5f5f8"} margin="5rem auto" padding={"5rem 0"}>
-      <Box spacing={8}>
-        <VStack width="80%" margin="0 auto">
-          <Box
-            id="Contact"
-            display={"flex"}
-            justifyContent="center"
-            alignItems={"center"}
-            width="20rem"
-            margin={"3em auto"}
-            gap="3">
-            <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
-            <Heading fontSize="3rem" maxWidth="20rem" color={"#151f3b"}>
-              Contact
-            </Heading>
-            <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
-          </Box>
-          <Box
-            display="flex"
-            width="100%"
-            gap="2%"
-            justifyContent="center"
-            flexWrap="wrap"
-            paddingBottom={"5rem "}>
-            <Button
-              size="md"
-              width="18rem"
-              height="48px"
-              variant="ghost"
-              color="#151f3b"
-              _hover={{ border: "2px solid #151f3b" }}
-              leftIcon={<HiPhone color="#151f3b" size="2em" />}>
-              +216 55 339 338
-            </Button>
-            <Button
-              size="md"
-              width="18rem"
-              height="48px"
-              variant="ghost"
-              color="#151f3b"
-              _hover={{ border: "2px solid #151f3b" }}
-              leftIcon={<HiOutlineMail color="#151f3b" size="2em" />}>
-              mohamedsafouen@gmail.com
-            </Button>
-            <Button
-              size="md"
-              width="18rem"
-              height="48px"
-              variant="ghost"
-              color="#151f3b"
-              _hover={{ border: "2px solid #151f3b" }}
-              leftIcon={<HiLocationMarker color="#151f3b" size="2em" />}>
-              Sousse, Tunisia
-            </Button>
-          </Box>
-          <Box margin="" rounded="md" w="100%">
-            <form onSubmit={handleOnSubmit}>
-              <VStack textAlign="start" spacing={4}>
-                <Box
-                  display={"flex"}
-                  justifyContent="space-around"
-                  width="100%"
-                  gap={"0.5em"}
-                  flexWrap={"wrap"}
-                  margin={"0 auto"}>
-                  <Box width={"35rem"}>
-                    <FormControl isRequired isInvalid={isError}>
-                      <FormLabel htmlFor="name">Name</FormLabel>
-                      <Input
-                        id="firstName"
-                        name="name"
-                        value={input.name}
-                        onChange={handleInputChange}
-                      />
-                      {!isError ? (
-                        <FormHelperText>Enter Your name.</FormHelperText>
-                      ) : (
-                        <FormErrorMessage>Name is required.</FormErrorMessage>
-                      )}
-                    </FormControl>
+    <Container
+      bg="#f5f5f8"
+      maxW="full"
+      mt={0}
+      centerContent
+      overflow="hidden"
+      padding={"0 3.5rem"}>
+      <Flex>
+        <Box
+          bg="#151f3b"
+          color="white"
+          borderRadius="lg"
+          m={{ sm: 4, md: 16, lg: 10 }}
+          p={{ sm: 5, md: 5, lg: 16 }}>
+          <Box p={4} id="Contact">
+            <Wrap
+              spacing={{ base: 15, sm: 3, md: 5, lg: 20 }}
+              alignItems={"center"}>
+              <WrapItem>
+                <Box>
+                  <Box
+                    display={"flex"}
+                    justifyContent="center"
+                    alignItems={"center"}
+                    width="20rem"
+                    margin={"0 auto"}
+                    gap="3">
+                    <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
+                    <Heading fontSize="3rem" maxWidth="20rem">
+                      Contact
+                    </Heading>
+                    <Box borderTop={"2px solid #c7c7d9"} width="3rem" />
                   </Box>
-                  <Box width={"35rem"}>
-                    <FormControl isRequired isInvalid={isError}>
-                      <FormLabel htmlFor="email">Email Address</FormLabel>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={input.email}
-                        onChange={handleInputChange}
+                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                    <VStack pl={0} spacing={3} alignItems="center">
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: "2px solid #1C6FEB" }}
+                        leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                        +216-55339338
+                      </Button>
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="250px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: "2px solid #1C6FEB" }}
+                        leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                        mohamedsafouen@gmail.com
+                      </Button>
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: "2px solid #1C6FEB" }}
+                        leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                        Sousse, Tunisia
+                      </Button>
+                    </VStack>
+                  </Box>
+                  <HStack
+                    mt={{ lg: 10, md: 10 }}
+                    spacing={5}
+                    px={5}
+                    justifyContent="center">
+                    <Link
+                      href="https://www.linkedin.com/in/med-safouen/"
+                      isExternal>
+                      <IconButton
+                        aria-label="linkedin"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "#0D74FF" }}
+                        icon={<BsLinkedin size="28px" />}
                       />
-                      {!isError ? (
-                        <FormHelperText>Enter Your email.</FormHelperText>
-                      ) : (
-                        <FormErrorMessage>Email is required.</FormErrorMessage>
-                      )}
-                    </FormControl>
+                    </Link>
+                    <Link href="https://github.com/mohamed-safouen" isExternal>
+                      <IconButton
+                        aria-label="github"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "#0D74FF" }}
+                        icon={<BsGithub size="28px" />}
+                      />
+                    </Link>
+                    <Link href="https://twitter.com/mohamed_safouen" isExternal>
+                      <IconButton
+                        aria-label="twitter"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "#0D74FF" }}
+                        icon={<BsTwitter size="28px" />}
+                      />
+                    </Link>
+                  </HStack>
+                </Box>
+              </WrapItem>
+              <WrapItem>
+                <Box bg="white" borderRadius="lg">
+                  <Box m={8} color="#0B0E3F">
+                    <form onSubmit={handleOnSubmit}>
+                      <VStack spacing={5}>
+                        <FormControl isRequired isInvalid={isError}>
+                          <FormLabel htmlFor="name">Your Name</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<BsPerson color="gray.800" />}
+                            />
+                            <Input
+                              id="firstName"
+                              name="name"
+                              value={input.name}
+                              onChange={handleInputChange}
+                            />
+                            {!isError ? (
+                              ""
+                            ) : (
+                              <FormErrorMessage>
+                                Name is required.
+                              </FormErrorMessage>
+                            )}
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl isRequired isInvalid={isError}>
+                          <FormLabel htmlFor="email">Email Address</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<MdOutlineEmail color="gray.800" />}
+                            />
+                            <Input
+                              id="email"
+                              name="email"
+                              type="email"
+                              value={input.email}
+                              onChange={handleInputChange}
+                            />
+                            {!isError ? (
+                              ""
+                            ) : (
+                              <FormErrorMessage>
+                                Email is required.
+                              </FormErrorMessage>
+                            )}
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl isInvalid={isError}>
+                          <FormLabel>Message</FormLabel>
+                          <Textarea
+                            id="comment"
+                            name="message"
+                            onChange={handleInputChange}
+                            value={input.message}
+                            borderColor="gray.300"
+                            _hover={{
+                              borderRadius: "gray.300",
+                            }}
+                            placeholder="message"
+                          />
+                          {!isError ? (
+                            ""
+                          ) : (
+                            <FormErrorMessage>
+                              Message is required.
+                            </FormErrorMessage>
+                          )}
+                        </FormControl>
+                        <FormControl float="right">
+                          <Button
+                            type="submit"
+                            variant="solid"
+                            bg="#151f3b"
+                            color="white"
+                            _hover={{
+                              bg: "white",
+                              color: "black",
+                              border: "black solid 1px",
+                            }}
+                            _active={{
+                              bg: "#151f3b",
+                              transform: "scale(0.98)",
+                              borderColor: "#151f3b",
+                            }}>
+                            Send Message
+                          </Button>
+                        </FormControl>
+                      </VStack>
+                    </form>
                   </Box>
                 </Box>
-                <FormControl isInvalid={isError}>
-                  <FormLabel htmlFor="message">Your message</FormLabel>
-                  <Textarea
-                    id="comment"
-                    name="message"
-                    onChange={handleInputChange}
-                    value={input.message}
-                    height={250}
-                  />
-                  {!isError ? (
-                    <FormHelperText>Enter Your Message</FormHelperText>
-                  ) : (
-                    <FormErrorMessage>Message is required.</FormErrorMessage>
-                  )}
-                </FormControl>
-                <Button
-                  type="submit"
-                  variant="outline"
-                  width="full"
-                  color="White"
-                  backgroundColor={"#151f3b"}
-                  _hover={{
-                    bg: "white",
-                    color: "black",
-                    border: "black solid 1px",
-                  }}
-                  _active={{
-                    bg: "#151f3b",
-                    transform: "scale(0.98)",
-                    borderColor: "#151f3b",
-                  }}>
-                  Send
-                </Button>
-              </VStack>
-            </form>
+              </WrapItem>
+            </Wrap>
           </Box>
-        </VStack>
-      </Box>
+        </Box>
+      </Flex>
       <div
         className="Arrow"
         onClick={() => {
@@ -190,11 +276,10 @@ const [input, setInput] = useState({
             left: 0,
             behavior: "smooth",
           });
-          
         }}>
-          <HiArrowUp size={"3rem"}/>
-        </div>
-    </Box>
+        <HiArrowUp size={"3rem"} />
+      </div>
+    </Container>
   );
 };
 export default Contact;

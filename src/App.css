@@ -9,10 +9,7 @@ body{
 }
 .App {
 font-family: Poppins,sans-serif;
-    position: relative;
-    font-size: 14px;
-    color: var(--secondary);
-    overflow-x: hidden;
+  
 }
 
 .progress-div {
@@ -46,5 +43,7 @@ font-family: Poppins,sans-serif;
   justify-content: center;
 }
 
-
+#Contact ul{
+  justify-content: center;
+}
 
