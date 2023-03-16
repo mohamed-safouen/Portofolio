@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from 'emailjs-com';
-import Swal from 'sweetalert2';
+import { toast,ToastContainer } from "react-toastify";
 import {
   Input,
   FormControl,
@@ -47,16 +47,27 @@ const [input, setInput] = useState({
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent Successfully'
-        })
+       toast.success("⭐Thank you for getting in touch!⭐", {
+         position: "bottom-right",
+         autoClose: 3000,
+         hideProgressBar: true,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         progress: undefined,
+         theme: "colored",
+       });
       }, (error) => {
-        Swal.fire({
-          icon: 'error',
-          title: 'Ooops, something went wrong',
-          text: error.text,
-        })
+       toast.error("Oups!", {
+         position: "bottom-right",
+         autoClose: 3000,
+         hideProgressBar: true,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         progress: undefined,
+         theme: "colored",
+       });
       });
     e.target.reset()
   };
@@ -69,6 +80,18 @@ const [input, setInput] = useState({
       centerContent
       overflow="hidden"
       padding={"0 3.5rem"}>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <Flex>
         <Box
           bg="#151f3b"

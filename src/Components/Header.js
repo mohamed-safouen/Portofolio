@@ -37,7 +37,8 @@ const Header = () => {
     toggleHamburger();
   };
   return (
-    <Box
+    <Box 
+    color ="white"
       top={0}
       left={0}
       right={0}
