@@ -1,12 +1,11 @@
 import { useState } from "react";
 import emailjs from 'emailjs-com';
-import { toast,ToastContainer } from "react-toastify";
 import {
   Input,
   FormControl,
   FormLabel,
   FormErrorMessage,
-  VStack,Box,Heading,Textarea,Button,
+  VStack,Box,Heading,Textarea,Button,useToast
 } from "@chakra-ui/react";
 import { HiArrowUp } from "react-icons/hi";
 import {
@@ -35,7 +34,7 @@ const [input, setInput] = useState({
   email:"",
   message:""
 })
-
+ const toast = useToast();
   const handleInputChange = (e) => setInput(e.target.value)
 
   const isError = input === ''
@@ -47,27 +46,19 @@ const [input, setInput] = useState({
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
-       toast.success("⭐Thank you for getting in touch!⭐", {
+       toast({
+         title: `⭐Thank you for getting in touch!⭐`,
+         status: "success",
+         isClosable: true,
          position: "bottom-right",
-         autoClose: 3000,
-         hideProgressBar: true,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-         theme: "colored",
        });
       }, (error) => {
-       toast.error("Oups!", {
-         position: "bottom-right",
-         autoClose: 3000,
-         hideProgressBar: true,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-         theme: "colored",
-       });
+      toast({
+        title: `⭐Oupss!!!⭐`,
+        status: "error",
+        isClosable: true,
+        position: "bottom-right",
+      });
       });
     e.target.reset()
   };
@@ -80,18 +71,7 @@ const [input, setInput] = useState({
       centerContent
       overflow="hidden"
       padding={"0 3.5rem"}>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+     
       <Flex>
         <Box
           bg="#151f3b"
