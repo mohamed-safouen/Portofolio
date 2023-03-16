@@ -50,14 +50,16 @@ const [input, setInput] = useState({
          title: `⭐Thank you for getting in touch!⭐`,
          status: "success",
          isClosable: true,
-         position: "bottom-right",
+         duration: 4000,
+         position: "top",
        });
       }, (error) => {
       toast({
         title: `⭐Oupss!!!⭐`,
         status: "error",
         isClosable: true,
-        position: "bottom-right",
+        duration: 4000,
+        position: "top",
       });
       });
     e.target.reset()
