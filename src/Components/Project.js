@@ -30,8 +30,8 @@ const Project = [
     Title: "RentCar",
     image: Rent,
     description:
-      "Rent Car Dashboard with JS/HTML/CSS with Bootstrap and Jquery Library",
-    link: "https://dash-rent-hoo0azytn-rent-car-tn.vercel.app/",
+      "Rent Car Dashboard with HTML/CSS/ReactJs Using Back4app as a Backend",
+    link: "https://rent-car-tn.vercel.app/",
   },
   {
     Title: "Little Lemon Restaurant",
