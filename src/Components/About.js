@@ -29,9 +29,8 @@ export const socials = [
  const Skills = [
    { name: <SiHtml5 size={"3rem"} />, text :"HTML5" ,value: 90 },
    { name: <SiCss3 size={"3rem"} />, text :"CSS3" ,value: 90 },
-   { name: <SiReact size={"3rem"} />,text :"ReactJs" ,value: 50 },
+   { name: <SiReact size={"3rem"} />,text :"ReactJs" ,value: 65 },
    { name: <SiJavascript size={"3rem"} />, text :"JavaScript" ,value: 70 },
-   { name: <SiJquery size={"3rem"} />,text :"Jquery" , value: 80 },
    { name: <SiBootstrap size={"3rem"} />, text :"Bootstrap" ,value: 80 },
    { name: <SiWordpress size={"3rem"} />,text :"WordPress" ,value: 60 },
    { name: <AiOutlineConsoleSql size={"3rem"} />, text :"SQL" ,value: 28 },
@@ -180,7 +179,7 @@ const About = () => {
           gridTemplateColumns={{base:"100%",lg:"50% 50%"}}
           gridGap="2em"
           margin="2em 0">
-          {Skills.map((skill, index) => {
+          {Skills.sort((a,b)=>b.value-a.value).map((skill, index) => {
             return (
               <div key={index} style={{ maxHeight: "12em" }}>
                 <HStack gap={"2"} alignItems={"flex-start"} >
