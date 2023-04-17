@@ -177,7 +177,7 @@ const About = () => {
         <Box
           id="bars"
           display="grid"
-          gridTemplateColumns="50% 50%"
+          gridTemplateColumns={{base:"100%",lg:"50% 50%"}}
           gridGap="2em"
           margin="2em 0">
           {Skills.map((skill, index) => {
