@@ -27,15 +27,15 @@ export const socials = [
   { url: "https://stackoverflow.com/users/19407251/mohamed-safouen-naguez" },
 ];
  const Skills = [
-   { name: <SiHtml5 size={"3rem"} />, value: 90 },
-   { name: <SiCss3 size={"3rem"} />, value: 90 },
-   { name: <SiReact size={"3rem"} />, value: 50 },
-   { name: <SiJavascript size={"3rem"} />, value: 70 },
-   { name: <SiJquery size={"3rem"} />, value: 80 },
-   { name: <SiBootstrap size={"3rem"} />, value: 80 },
-   { name: <SiWordpress size={"3rem"} />, value: 60 },
-   { name: <AiOutlineConsoleSql size={"3rem"} />, value: 28 },
-{name : <SiNextdotjs size={"3rem"} /> , value : 40} ];
+   { name: <SiHtml5 size={"3rem"} />, text :"HTML5" ,value: 90 },
+   { name: <SiCss3 size={"3rem"} />, text :"CSS3" ,value: 90 },
+   { name: <SiReact size={"3rem"} />,text :"ReactJs" ,value: 50 },
+   { name: <SiJavascript size={"3rem"} />, text :"JavaScript" ,value: 70 },
+   { name: <SiJquery size={"3rem"} />,text :"Jquery" , value: 80 },
+   { name: <SiBootstrap size={"3rem"} />, text :"Bootstrap" ,value: 80 },
+   { name: <SiWordpress size={"3rem"} />,text :"WordPress" ,value: 60 },
+   { name: <AiOutlineConsoleSql size={"3rem"} />, text :"SQL" ,value: 28 },
+{name : <SiNextdotjs size={"3rem"} /> ,text :"NextJs" , value : 40} ];
 const About = () => {
   const title = "I'm Front End Developer";
   const [type, setType] = useState("");
@@ -183,9 +183,12 @@ const About = () => {
           {Skills.map((skill, index) => {
             return (
               <div key={index} style={{ maxHeight: "12em" }}>
+                <HStack gap={"2"} alignItems={"flex-start"} >
                 <Box  marginBottom={"1rem"}>
                   {skill.name}
-                </Box>
+                </Box> 
+                <Text fontSize={"1.8rem"} fontWeight={"500"}>{skill.text}</Text>
+                </HStack>
                 <ProgressBar
                   style={{ margin: "1em 0" }}
                   width="100%"
