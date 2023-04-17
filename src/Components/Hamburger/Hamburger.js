@@ -3,7 +3,11 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 const Hamburger=({isOpen})=>{
     return (
       <>
-        {isOpen ? <CloseIcon color="black" /> : <HamburgerIcon color="black" />}
+        {isOpen ? (
+          <CloseIcon boxSize={"1.8rem"} color="black" />
+        ) : (
+          <HamburgerIcon color="black" boxSize={"1.8rem"} />
+        )}
       </>
     );
 }
