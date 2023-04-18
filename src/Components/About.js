@@ -6,7 +6,6 @@ import {
   SiReact,
   SiCss3,
   SiJavascript,
-  SiJquery,
   SiBootstrap,
   SiWordpress,SiNextdotjs
 } from "react-icons/si";
