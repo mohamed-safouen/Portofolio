@@ -118,7 +118,7 @@ const About = () => {
             <strong>Phone: </strong>+21655339338
           </Text>
           <Text fontSize={"0.99rem"}>
-            <strong>Experience: </strong> +2 Years
+            <strong>Experience: </strong> +{new Date().getFullYear() - 2021} Years
           </Text>
           <Link
             href={file}
