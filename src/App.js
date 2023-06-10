@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState,useEffect } from "react";
-import { ChakraProvider,VStack } from "@chakra-ui/react";
+import { ChakraProvider} from "@chakra-ui/react";
 import { Spinner,Flex } from "@chakra-ui/react";
 import Header from "./Components/Header";
 import About from "./Components/About";
@@ -40,13 +40,13 @@ function App() {
             />
           </Flex>
         ) : (
-          <VStack justifyContent="center" maxWidth="1280px">
+          <>
             <Header />
             <About />
             <Projects />
             <Contact />
             <Footer />
-          </VStack>
+          </>
         )}
       </ChakraProvider>
     </>
