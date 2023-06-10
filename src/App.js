@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState,useEffect } from "react";
-import { ChakraProvidern,VStack } from "@chakra-ui/react";
+import { ChakraProvider,VStack } from "@chakra-ui/react";
 import { Spinner,Flex } from "@chakra-ui/react";
 import Header from "./Components/Header";
 import About from "./Components/About";
