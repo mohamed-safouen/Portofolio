@@ -11,6 +11,7 @@ import tic from "./../images/photo1.png";
 import Weather from "./../images/photo3.png";
 import Rent from "./../images/photo4.png";
 import Resto from "./../images/photo5.png";
+import Yebo from "./../images/photo6.png";
 import { useEffect } from "react";
 const Project = [
   {
@@ -38,6 +39,13 @@ const Project = [
     image: Resto,
     description: "Final project for Meta Front-End Developer",
     link: "https://mohamed-safouen.github.io/Little-Limon-Restaurant/",
+  },
+  {
+    Title: "Yebofly",
+    image: Yebo,
+    description:
+      "In Development : Designing and developing user-centric interfaces for our E-SIM provider selling platform. using React.js, Figma, and Chakra UI ",
+    link: "https://yebofly.vercel.app/",
   },
 ];
 const Projects = () => {
