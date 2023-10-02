@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import emailjs from 'emailjs-com';
 import {
   Input,
@@ -34,6 +34,24 @@ const [input, setInput] = useState({
   email:"",
   message:""
 })
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const handlerscroll = () => {
+      const scrollY = window.scrollY;
+  
+        if (scrollY >= 500 ) {
+          setScroll(true);
+        } else {
+          setScroll(false);
+        }
+      }
+   
+
+    window.addEventListener("scroll", handlerscroll);
+    return () => {
+      window.removeEventListener("scroll", handlerscroll);
+    };
+  }, []);
  const toast = useToast();
   const handleInputChange = (e) => setInput(e.target.value)
 
@@ -73,7 +91,6 @@ const [input, setInput] = useState({
       centerContent
       overflow="hidden"
       padding={"0 3.5rem"}>
-     
       <Flex>
         <Box
           bg="#151f3b"
@@ -273,17 +290,19 @@ const [input, setInput] = useState({
           </Box>
         </Box>
       </Flex>
-      <div
-        className="Arrow"
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          });
-        }}>
-        <HiArrowUp size={"3rem"} />
-      </div>
+      {scroll && (
+        <div
+          className="Arrow"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}>
+          <HiArrowUp size={"3rem"} />
+        </div>
+      )}
     </Container>
   );
 };
