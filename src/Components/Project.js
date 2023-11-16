@@ -12,6 +12,7 @@ import Weather from "./../images/photo3.png";
 import Rent from "./../images/photo4.png";
 import Resto from "./../images/photo5.png";
 import Yebo from "./../images/photo6.png";
+import Rapidos from"./../images/photo7.png";
 import { useEffect } from "react";
 const Project = [
   {
@@ -46,6 +47,13 @@ const Project = [
     description:
       "In Development : Designing and developing user-centric interfaces for our E-SIM provider selling platform. using React.js, Figma, and Chakra UI ",
     link: "https://yebofly.vercel.app/",
+  },
+  {
+    Title: "Rapidos-Delivery",
+    image: Rapidos,
+    description:
+      "In Development : Designing and developing user-centric interfaces for Delivery Food Service platform. using WordPress ",
+    link: "https://web.rapidos-delivery.com/",
   },
 ];
 const Projects = () => {
@@ -92,7 +100,7 @@ const Projects = () => {
                       transition="all .5s ease-in-out"
                       _hover={{
                         backgroundColor: "#151f3b",
-                        transform: "scale(1.2)",
+                        transform: "scale(1.1)",
                       }}
                       borderRadius="md"
                       bg="#14213D"
