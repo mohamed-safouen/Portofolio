@@ -80,7 +80,7 @@ const About = () => {
           data-aos="fade-up"
           data-aos-duration="800"
           data-aos-mirror="true"
-          width={{base:80%,md:"50%"}}
+          width={{base:"80%",md:"50%"}}
           alignItems="start"
           fontWeight="500"
           lineHeight={"normal"}
