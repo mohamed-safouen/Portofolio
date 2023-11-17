@@ -31,7 +31,7 @@ export const socials = [
    { name: <SiReact size={"3rem"} />,text :"ReactJs" ,value: 65 },
    { name: <SiJavascript size={"3rem"} />, text :"JavaScript" ,value: 70 },
    { name: <SiBootstrap size={"3rem"} />, text :"Bootstrap" ,value: 80 },
-   { name: <SiWordpress size={"3rem"} />,text :"WordPress" ,value: 60 },
+   { name: <SiWordpress size={"3rem"} />,text :"WordPress" ,value: 80 },
    { name: <AiOutlineConsoleSql size={"3rem"} />, text :"SQL" ,value: 28 },
 {name : <SiNextdotjs size={"3rem"} /> ,text :"NextJs" , value : 40} ];
 const About = () => {
