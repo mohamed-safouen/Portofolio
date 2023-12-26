@@ -7,7 +7,7 @@ import {
   SiCss3,
   SiJavascript,
   SiBootstrap,
-  SiWordpress,SiNextdotjs
+  SiWordpress,SiNextdotjs,SiVuedotjs
 } from "react-icons/si";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import AOS from "aos";
@@ -33,7 +33,7 @@ export const socials = [
    { name: <SiBootstrap size={"3rem"} />, text :"Bootstrap" ,value: 80 },
    { name: <SiWordpress size={"3rem"} />,text :"WordPress" ,value: 85 },
    { name: <AiOutlineConsoleSql size={"3rem"} />, text :"SQL" ,value: 28 },
-{name : <SiNextdotjs size={"3rem"} /> ,text :"NextJs" , value : 40} ];
+{name : <SiNextdotjs size={"3rem"} /> ,text :"NextJs" , value : 40},{name: <SiVuedotjs size={"3rem"} />,text :"VueJs" ,value: 30}];
 const About = () => {
   const title = "I'm Front End Developer";
   const [type, setType] = useState("");
