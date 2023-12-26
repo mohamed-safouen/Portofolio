@@ -300,7 +300,7 @@ const [input, setInput] = useState({
               behavior: "smooth",
             });
           }}>
-          <HiArrowUp size={"3rem"} />
+          <HiArrowUp size={"2rem"} />
         </div>
       )}
     </Container>
