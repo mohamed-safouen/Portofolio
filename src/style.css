@@ -31,9 +31,9 @@
      border: solid #151f3b 1px;
      border-radius: 5px;
      background-color:transparent;
-     width: 3rem;
+     width: 2rem;
      bottom: 15% ;
-     height: 3rem;
+     height: 2rem;
      animation: sdb04 2s infinite;
      -webkit-animation: sdb04 1.2s infinite;
      cursor: pointer;
