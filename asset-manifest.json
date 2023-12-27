@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Portofolio/static/css/main.a8e136ed.css",
-    "main.js": "/Portofolio/static/js/main.d4d86d50.js",
+    "main.js": "/Portofolio/static/js/main.4f74e0d7.js",
     "static/js/787.dd950cf4.chunk.js": "/Portofolio/static/js/787.dd950cf4.chunk.js",
     "static/media/photo6.png": "/Portofolio/static/media/photo6.30714a393ce4b25621e5.png",
     "static/media/photo1.png": "/Portofolio/static/media/photo1.9bd1ebb0da80ed30f3ec.png",
     "static/media/logo.png": "/Portofolio/static/media/logo.e4732e661d46abca0281.png",
     "static/media/brand-icons.svg": "/Portofolio/static/media/brand-icons.6729d29753e000c17489.svg",
+    "static/media/Mohamed's Resume.pdf": "/Portofolio/static/media/Mohamed's Resume.2c9aadaa28676e9f6d92.pdf",
     "static/media/icons.svg": "/Portofolio/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/photo5.png": "/Portofolio/static/media/photo5.e8d9de8b41bcb55a5e2b.png",
     "static/media/avatar.jpg": "/Portofolio/static/media/avatar.bfc319806e02508b8e4f.jpg",
-    "static/media/Mohamed's Resume.pdf": "/Portofolio/static/media/Mohamed's Resume.f529b048726640393765.pdf",
     "static/media/outline-icons.svg": "/Portofolio/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
     "static/media/icons.eot": "/Portofolio/static/media/icons.a01e3f2d6c83dc3aee17.eot",
     "static/media/icons.ttf": "/Portofolio/static/media/icons.c656b8caa454ed19b9a2.ttf",
@@ -30,11 +30,11 @@
     "static/media/photo3.png": "/Portofolio/static/media/photo3.516a6da514ebd95db098.png",
     "index.html": "/Portofolio/index.html",
     "main.a8e136ed.css.map": "/Portofolio/static/css/main.a8e136ed.css.map",
-    "main.d4d86d50.js.map": "/Portofolio/static/js/main.d4d86d50.js.map",
+    "main.4f74e0d7.js.map": "/Portofolio/static/js/main.4f74e0d7.js.map",
     "787.dd950cf4.chunk.js.map": "/Portofolio/static/js/787.dd950cf4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8e136ed.css",
-    "static/js/main.d4d86d50.js"
+    "static/js/main.4f74e0d7.js"
   ]
 }
