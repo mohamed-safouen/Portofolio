@@ -8,6 +8,7 @@ import Projects from "./Components/Project";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import "./App.css"
+import SkillsSection from "./Components/Skills";
 
 function App() {
   window.$crisp = [];
@@ -43,6 +44,7 @@ function App() {
           <>
             <Header />
             <About />
+            <SkillsSection/>
             <Projects />
             <Contact />
             <Footer />

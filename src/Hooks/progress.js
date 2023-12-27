@@ -4,13 +4,12 @@ const ProgressBar = ({ percent }) => {
 const [value, setValue] = useState(0);
 
 useEffect(() => {
-  
     const handlerscroll=()=>{
       const scrollY = window.scrollY;
       if (scrollY) {
-        const h_About = document.getElementById("About").clientHeight;
-        const h_box = document.getElementById("box").clientHeight;
-        if (scrollY > h_About - 233 && scrollY < h_box - 73) {
+        const h_About = document.getElementById("Skills").clientHeight;
+        
+        if (scrollY > h_About - 233) {
           setValue(percent);
         } else {
           setValue(0);
