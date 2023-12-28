@@ -48,6 +48,7 @@ const About = () => {
         id="About"
         margin="0 auto"
         flexWrap="wrap"
+        alignItems={"center"}
         justifyItems={"center"}
         justifyContent="space-around">
         <Box
